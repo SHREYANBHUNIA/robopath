@@ -43,6 +43,7 @@ type EventState = {
 
 const GRID_WIDTH = 12;
 const GRID_HEIGHT = 10;
+const assetBase = `${import.meta.env.BASE_URL}robopath-assets/`;
 const initialStart = { x: 1, y: 8 };
 const initialGoal = { x: 10, y: 1 };
 const INITIAL_BLOCKS = [
@@ -353,7 +354,7 @@ export default function Home() {
       <header className="topbar">
         <div className="brand-lockup">
           <div className="logo-orbit" aria-hidden="true">
-            <img src="/manus-storage/robopath-mark_1c15ba3d.png" alt="" />
+            <img src={`${assetBase}robopath-mark.png`} alt="" />
           </div>
           <div>
             <p className="eyebrow">AUTONOMOUS NAVIGATION LAB</p>
@@ -408,7 +409,7 @@ export default function Home() {
             </div>
 
             <div className="field-frame">
-              <div className="world-plot" style={{ backgroundImage: "url('/manus-storage/robopath-field-texture_ad3ece2e.jpg')" }}>
+              <div className="world-plot" style={{ backgroundImage: `url(${assetBase}robopath-field-texture.jpg)` }}>
                 <div className="plot-corner corner-top-left">NORTH / +Y</div>
                 <div className="plot-corner corner-top-right">RANGE 00.48 KM²</div>
                 <div className="plot-corner corner-bottom-left">X AXIS →</div>
@@ -485,7 +486,7 @@ export default function Home() {
 
             <section className="dossier-block sensor-block">
               <div className="sensor-visual">
-                <img src="/manus-storage/robopath-route-illustration_197a72f7.jpg" alt="Autonomous ground robot rerouting around a newly detected obstacle" />
+                <img src={`${assetBase}robopath-route-illustration.jpg`} alt="Autonomous ground robot rerouting around a newly detected obstacle" />
                 <div className="sensor-overlay"><Radar size={16} /> REALTIME MAP UPDATE</div>
               </div>
               <div className="sensor-controls">
